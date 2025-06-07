@@ -1,8 +1,17 @@
+const isProduction = process.env.NODE_ENV === 'production';
+
+const productsMfeBaseUrl = isProduction
+  ? process.env.PRODUCTS_MFE_URL
+  : 'http://localhost:3001';
+const cartMfeBaseUrl = isProduction
+  ? process.env.CART_MFE_URL
+  : 'http://localhost:3002';
+
 const config = {
-  name: 'zephyr-microfrontend-app',
+  name: 'main-app-valor-software',
   remotes: {
-    products: 'products@http://localhost:3001/remoteEntry.js',
-    cart: 'cart@http://localhost:3002/remoteEntry.js',
+    products: `products@${productsMfeBaseUrl}/remoteEntry.js`,
+    cart: `cart@${cartMfeBaseUrl}/remoteEntry.js`,
   },
   exposes: {},
   shared: {
