@@ -7,7 +7,8 @@ import { withZephyr } from 'zephyr-rspack-plugin';
 import moduleFederationConfig from './module-federation.config';
 
 const isDev = process.env.NODE_ENV === 'development';
-const publicPath = isDev ? 'http://localhost:3000/' : '/';
+const isProduction = process.env.NODE_ENV === 'production';
+const publicPath = isProduction ? '/' : 'http://localhost:3000/';
 
 const targets = ['chrome >= 87', 'edge >= 88', 'firefox >= 78', 'safari >= 14'];
 
@@ -29,7 +30,7 @@ export default withZephyr()({
   },
   output: {
     uniqueName: 'main-app-valor-software',
-    publicPath,
+    publicPath: publicPath,
   },
   experiments: {
     css: true,
