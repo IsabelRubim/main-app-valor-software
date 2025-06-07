@@ -4,7 +4,10 @@ This project is built using the Zephyr microfrontend platform to streamline inte
 
 ## Overview
 
-This is the host application that composes multiple microfrontends—`cart` and `products`—using Module Federation with [rspack](https://rspack.dev/).
+This is the host application to showcase the power of Zephyr with Module Federation by creating two micro-frontends that resemble an "e-commerce" that composes multiple microfrontends—`cart` and `products`— with [rspack](https://rspack.dev/).
+
+![Products](https://github.com/user-attachments/assets/964efd61-dd7e-488b-966a-0d7f2841528e)
+![Cart](https://github.com/user-attachments/assets/f49844c7-fd42-456d-9e48-11817a8efbb1)
 
 ## Architecture
 
@@ -49,6 +52,8 @@ pnpm install
 ```bash
 cd main-app-valor-software && pnpm build
 ```
+
+Get the link that will be generated and see the project.
 
 ## How It Connects to Microfrontends
 
