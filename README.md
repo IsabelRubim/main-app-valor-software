@@ -15,7 +15,7 @@ This is the host application that composes multiple microfrontends—`cart` and 
 
 ## Prerequisites
 
-- Node.js >= 16
+- Node.js >= 20
 - pnpm or npm
 - `rspack` CLI installed (via devDependencies)
 

@@ -7,6 +7,9 @@
     "build:start": "cd dist && rspack serve",
     "start": "NODE_ENV=development rspack serve"
   },
+  "engines": {
+    "node": ">=20"
+  },
   "devDependencies": {
     "@rspack/cli": "~1.2.0",
     "@rspack/core": "~1.2.0",
